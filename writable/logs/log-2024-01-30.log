@@ -642,3 +642,117 @@ in APPPATH\Controllers\Crud.php on line 114.
  4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
  5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-30 15:16:04 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql104.infinityfree.com failed: No such host is known.  in C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 185)
+#1 C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('sql104.infinity...', 'if0_35886718', 'KMzoAEwVcB', 'sampledata0201', 3306, '', 0)
+#2 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\test-project\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 C:\xampp\htdocs\test-project\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 C:\xampp\htdocs\test-project\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#7 C:\xampp\htdocs\test-project\app\Controllers\Crud.php(16): CodeIgniter\BaseModel->paginate(10)
+#8 C:\xampp\htdocs\test-project\system\CodeIgniter.php(941): App\Controllers\Crud->index()
+#9 C:\xampp\htdocs\test-project\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#10 C:\xampp\htdocs\test-project\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\test-project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql104.infinityfree.com failed: No such host is known.  in C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('sql104.infinity...', 'if0_35886718', 'KMzoAEwVcB', 'sampledata0201', 3306, '', 0)
+#1 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\test-project\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\test-project\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\test-project\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\test-project\app\Controllers\Crud.php(16): CodeIgniter\BaseModel->paginate(10)
+#7 C:\xampp\htdocs\test-project\system\CodeIgniter.php(941): App\Controllers\Crud->index()
+#8 C:\xampp\htdocs\test-project\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 C:\xampp\htdocs\test-project\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\test-project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql104.infinityfree.com failed: No such host is known.  in C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\test-project\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\xampp\htdocs\test-project\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\xampp\htdocs\test-project\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#5 C:\xampp\htdocs\test-project\app\Controllers\Crud.php(16): CodeIgniter\BaseModel->paginate(10)
+#6 C:\xampp\htdocs\test-project\system\CodeIgniter.php(941): App\Controllers\Crud->index()
+#7 C:\xampp\htdocs\test-project\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#8 C:\xampp\htdocs\test-project\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\test-project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-30 15:16:04 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql104.infinityfree.com failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tbl_data`', [], false)
+ 3 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Crud.php(16): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-30 15:17:42 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for sql104.infinityfree.com failed: No such host is known.  in C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 185)
+#1 C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('sql104.infinity...', 'if0_35886718', 'des1024d*', 'sampledata0201', 3306, '', 0)
+#2 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\test-project\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#5 C:\xampp\htdocs\test-project\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#6 C:\xampp\htdocs\test-project\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#7 C:\xampp\htdocs\test-project\app\Controllers\Crud.php(16): CodeIgniter\BaseModel->paginate(10)
+#8 C:\xampp\htdocs\test-project\system\CodeIgniter.php(941): App\Controllers\Crud->index()
+#9 C:\xampp\htdocs\test-project\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#10 C:\xampp\htdocs\test-project\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\test-project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for sql104.infinityfree.com failed: No such host is known.  in C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('sql104.infinity...', 'if0_35886718', 'des1024d*', 'sampledata0201', 3306, '', 0)
+#1 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\test-project\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 C:\xampp\htdocs\test-project\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#5 C:\xampp\htdocs\test-project\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#6 C:\xampp\htdocs\test-project\app\Controllers\Crud.php(16): CodeIgniter\BaseModel->paginate(10)
+#7 C:\xampp\htdocs\test-project\system\CodeIgniter.php(941): App\Controllers\Crud->index()
+#8 C:\xampp\htdocs\test-project\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#9 C:\xampp\htdocs\test-project\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\test-project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for sql104.infinityfree.com failed: No such host is known.  in C:\xampp\htdocs\test-project\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\test-project\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\test-project\system\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#3 C:\xampp\htdocs\test-project\system\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#4 C:\xampp\htdocs\test-project\system\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+#5 C:\xampp\htdocs\test-project\app\Controllers\Crud.php(16): CodeIgniter\BaseModel->paginate(10)
+#6 C:\xampp\htdocs\test-project\system\CodeIgniter.php(941): App\Controllers\Crud->index()
+#7 C:\xampp\htdocs\test-project\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+#8 C:\xampp\htdocs\test-project\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\test-project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-01-30 15:17:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for sql104.infinityfree.com failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1700): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `tbl_data`', [], false)
+ 3 SYSTEMPATH\Model.php(624): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+ 4 SYSTEMPATH\BaseModel.php(1239): CodeIgniter\Model->countAllResults(false)
+ 5 APPPATH\Controllers\Crud.php(16): CodeIgniter\BaseModel->paginate(10)
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Crud->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Crud))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
